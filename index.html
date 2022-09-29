@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            display: grid;
+            grid-template-columns:32px 1fr 110px 1fr;
+            grid-template-rows: 1fr 35px 1fr;
+            grid-template-areas: 
+                ".bubble1 . ."
+                ". . . ."
+                ". . . bubble2";
+            background-color: #fdfdfd;
+            height: 224px;
+            width: 800px;
+            margin-left: 25px;
+        }
+        .chatbubble{
+            height: 84px;
+        }
+        .destiny{
+            grid-area: bubble1;
+            background-color: #f1ffef;
+            width: 348px;
+            display: flex;
+            align-items: center;
+            margin-top: 6px;
+        }
+        .destiny>article:first-child{
+            background-color: #fdfdfd;
+            width: 86px;
+        }
+        .textexternal{
+            margin-left: 8px;
+            margin-bottom: 6px;
+        }
+        time{
+            float: right;
+            margin-right: 20px;
+            color:#949a93; 
+            font-size: 12px;
+        }
+        img{
+            height: 51px;
+            width: 51px;
+            border-radius: 30px;
+            margin-bottom: 28px;
+        }
+        short{
+            margin-right: 13px;
+        }
+        .origin{
+            grid-area: bubble2;
+            background-color: #f1f5fb;
+            width: 300px;
+        }
+        .origin>p{
+            width: 240px;
+            margin-left: 17px;
+            margin-right: 23px;
+        }
+        .thefirst{
+            position: relative;
+            background: transparent;
+        }
+        .thechild{
+            position: absolute;
+            background-color: transparent;
+            right: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article class="destiny chatbubble">
+            <article>
+                <img src="morty.jpeg" alt="Morty profile pick">
+            </article>
+            <article class="textexternal">
+                <p>Hi Den, Not yet. I am waiting for Angela's report!</p>
+                <time><short>11:34 AM</short><span class="thefirst">&#10003;<span class="thechild">&#10003;</span></span></time>
+            </article>
+        </article>
+        <article class="origin chatbubble">
+            <p>Ok! Angela, when should we wait for your report?</p>
+            <time><short>11:29 AM</short><span>&#10003;</span></time>
+        </article>
+    </div>
+</body>
+</html>
